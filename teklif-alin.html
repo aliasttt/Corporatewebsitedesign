@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PrimeAsansör - Ücretsiz teklif alın, en uygun asansör çözümü için bize ulaşın">
+    <title>Teklif Alın - PrimeAsansör</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⬆</span>
+                    <span class="logo-text">PrimeAsansör</span>
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menü">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+                    <li><a href="hizmetler.html" class="nav-link">Hizmetler</a></li>
+                    <li><a href="referanslar.html" class="nav-link">Referanslar</a></li>
+                    <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+                    <li><a href="teklif-alin.html" class="btn btn-primary nav-cta">Teklif Alın</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="offer-header">
+        <div class="container">
+            <h1>Ücretsiz Teklif Alın</h1>
+            <p>Projeniz için en uygun asansör çözümünü bulalım</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <h4>Hızlı Dönüş</h4>
+                    <p>24 saat içinde detaylı teklif</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <h4>Ücretsiz Keşif</h4>
+                    <p>Yerinde inceleme ve ölçüm</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📊</div>
+                    <h4>Detaylı Analiz</h4>
+                    <p>Proje bazlı özel çözümler</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <h4>Şeffaf Fiyat</h4>
+                    <p>Gizli maliyet yok</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Form Section -->
+    <section class="section offer-form-section">
+        <div class="container">
+            <div class="offer-form-grid">
+                <div class="form-main">
+                    <h2>Teklif Formu</h2>
+                    <p class="form-intro">Aşağıdaki formu eksiksiz doldurun, uzman ekibimiz en kısa sürede sizinle iletişime geçsin.</p>
+                    
+                    <form class="offer-form" id="offerForm">
+                        <div class="form-section">
+                            <h3>Kişisel Bilgiler</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Ad Soyad *</label>
+                                    <input type="text" id="fullName" name="fullName" required placeholder="Ad ve soyadınızı giriniz">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="company">Firma Adı</label>
+                                    <input type="text" id="company" name="company" placeholder="Firma adınız (opsiyonel)">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">E-posta *</label>
+                                    <input type="email" id="email" name="email" required placeholder="ornek@email.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Telefon *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="5XX XXX XX XX">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Proje Detayları</h3>
+                            
+                            <div class="form-group">
+                                <label for="serviceType">Hizmet Türü *</label>
+                                <select id="serviceType" name="serviceType" required>
+                                    <option value="">Lütfen seçiniz</option>
+                                    <option value="bina-ici">Bina İçi Asansör</option>
+                                    <option value="yuk">Yük Asansörü</option>
+                                    <option value="modernizasyon">Asansör Modernizasyonu</option>
+                                    <option value="bakim">Bakım & Servis Sözleşmesi</option>
+                                    <option value="ariza">Arıza Onarımı</option>
+                                    <option value="diger">Diğer</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="buildingType">Bina Türü *</label>
+                                    <select id="buildingType" name="buildingType" required>
+                                        <option value="">Lütfen seçiniz</option>
+                                        <option value="konut">Konut</option>
+                                        <option value="ofis">Ofis/İş Merkezi</option>
+                                        <option value="otel">Otel</option>
+                                        <option value="avm">Alışveriş Merkezi</option>
+                                        <option value="hastane">Hastane/Sağlık</option>
+                                        <option value="fabrika">Fabrika/Endüstriyel</option>
+                                        <option value="diger">Diğer</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="floors">Kat Sayısı *</label>
+                                    <input type="number" id="floors" name="floors" min="2" max="100" required placeholder="Örn: 10">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="elevatorCount">Asansör Adedi *</label>
+                                    <input type="number" id="elevatorCount" name="elevatorCount" min="1" max="50" required placeholder="Örn: 2">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="capacity">Kapasite (Kişi) *</label>
+                                    <select id="capacity" name="capacity" required>
+                                        <option value="">Lütfen seçiniz</option>
+                                        <option value="4">4 Kişi</option>
+                                        <option value="6">6 Kişi</option>
+                                        <option value="8">8 Kişi</option>
+                                        <option value="10">10 Kişi</option>
+                                        <option value="13">13 Kişi</option>
+                                        <option value="16">16 Kişi</option>
+                                        <option value="21">21 Kişi</option>
+                                        <option value="yuk">Yük Asansörü (kg bazlı)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">Proje Konumu *</label>
+                                <input type="text" id="location" name="location" required placeholder="Şehir, İlçe">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeline">Planlanan Başlangıç Tarihi</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Lütfen seçiniz</option>
+                                    <option value="acil">En kısa sürede</option>
+                                    <option value="1ay">1 ay içinde</option>
+                                    <option value="3ay">3 ay içinde</option>
+                                    <option value="6ay">6 ay içinde</option>
+                                    <option value="belirsiz">Henüz belirsiz</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Bütçe Aralığı</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Lütfen seçiniz</option>
+                                    <option value="100k">100.000 TL - 250.000 TL</option>
+                                    <option value="250k">250.000 TL - 500.000 TL</option>
+                                    <option value="500k">500.000 TL - 1.000.000 TL</option>
+                                    <option value="1m">1.000.000 TL +</option>
+                                    <option value="belirsiz">Henüz belirsiz</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="description">Ek Bilgiler ve Özel İstekler</label>
+                                <textarea id="description" name="description" rows="5" placeholder="Projeniz hakkında bilgi vermek istediğiniz ek detaylar..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Tercihler</h3>
+                            
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="yerinde-kesif">
+                                    <span>Yerinde keşif istiyorum</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="bakim-anlasmasi">
+                                    <span>Bakım anlaşması yapmak istiyorum</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="hizli-montaj">
+                                    <span>Hızlı montaj gerekiyor</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="finansman">
+                                    <span>Finansman imkanları hakkında bilgi almak istiyorum</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <label class="checkbox-label consent">
+                                <input type="checkbox" name="consent" required>
+                                <span>
+                                    <a href="#">Kişisel verilerin korunması</a> ve <a href="#">gizlilik politikasını</a> okudum, onaylıyorum. *
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Teklif İste</button>
+                    </form>
+                </div>
+                
+                <div class="form-sidebar">
+                    <div class="sidebar-info-card">
+                        <h3>Süreç Nasıl İşler?</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Form Doldurma</h4>
+                                    <p>Teklif formunu eksiksiz doldurun</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>İlk Görüşme</h4>
+                                    <p>Uzmanımız 24 saat içinde sizi arar</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Keşif & Analiz</h4>
+                                    <p>Ücretsiz yerinde keşif yapılır</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Teklif Sunumu</h4>
+                                    <p>Detaylı teklif ve ödeme planı</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-contact-card">
+                        <h3>Hızlı İletişim</h3>
+                        <p>Form doldurmak yerine direkt aramak ister misiniz?</p>
+                        <a href="tel:+902125551234" class="btn btn-outline btn-block">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            0212 555 12 34
+                        </a>
+                        <a href="https://wa.me/905325556789" class="btn btn-primary btn-block" style="margin-top: 10px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="sidebar-testimonial">
+                        <div class="testimonial-icon">💬</div>
+                        <p>"PrimeAsansör ile çalışmak harika bir deneyimdi. Profesyonel ekip, kaliteli ürün ve mükemmel servis."</p>
+                        <strong>- Mehmet Y., İstanbul</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⬆</span>
+                        <span class="logo-text">PrimeAsansör</span>
+                    </div>
+                    <p>25 yıldır güvenle yükseliyoruz. Yüksek kalite asansör çözümleri.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Hızlı Linkler</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="hizmetler.html">Hizmetler</a></li>
+                        <li><a href="referanslar.html">Referanslar</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Hizmetler</h4>
+                    <ul class="footer-links">
+                        <li><a href="hizmetler.html#bina-ici">Bina İçi Asansörler</a></li>
+                        <li><a href="hizmetler.html#yuk">Yük Asansörleri</a></li>
+                        <li><a href="hizmetler.html#bakim">Bakım & Servis</a></li>
+                        <li><a href="teklif-alin.html">Teklif Alın</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>İletişim</h4>
+                    <ul class="footer-links">
+                        <li>Atatürk Mah. Asansör Cad. No:123</li>
+                        <li>Beşiktaş, İstanbul</li>
+                        <li>Tel: +90 212 555 1234</li>
+                        <li>Email: info@primeasansor.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 PrimeAsansör. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/905325556789" class="whatsapp-button" target="_blank" aria-label="WhatsApp Destek">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span>WhatsApp<br>Destek</span>
+    </a>
+
+    <script src="scripts/main.js"></script>
+    <style>
+        .offer-header {
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-hover));
+            color: var(--white);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .offer-header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .offer-header p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+        }
+        
+        .benefits-section {
+            padding: 60px 0;
+            background: var(--bg-light);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-item {
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-item h4 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+        }
+        
+        .benefit-item p {
+            color: var(--text-light);
+        }
+        
+        .offer-form-section {
+            padding: 80px 0;
+        }
+        
+        .offer-form-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+        
+        .form-main h2 {
+            color: var(--primary-blue);
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .form-intro {
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .form-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 2px solid var(--bg-light);
+        }
+        
+        .form-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .form-section h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            cursor: pointer;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            margin-top: 4px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .checkbox-label span {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .checkbox-label.consent span {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+        
+        .checkbox-label.consent a {
+            color: var(--accent-orange);
+            text-decoration: underline;
+        }
+        
+        .form-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .sidebar-info-card,
+        .sidebar-contact-card,
+        .sidebar-testimonial {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+        }
+        
+        .sidebar-info-card h3,
+        .sidebar-contact-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .sidebar-contact-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .process-step {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-orange);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: var(--primary-blue);
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+        
+        .step-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .sidebar-testimonial {
+            background: var(--white);
+            border: 2px solid var(--bg-light);
+            text-align: center;
+        }
+        
+        .testimonial-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-testimonial p {
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .sidebar-testimonial strong {
+            color: var(--primary-blue);
+        }
+        
+        @media (max-width: 768px) {
+            .offer-header h1 {
+                font-size: 2rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .offer-form-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
