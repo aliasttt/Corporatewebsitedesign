@@ -164,18 +164,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Apply animation to cards and sections
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.service-card, .reference-card, .about-preview-content, .contact-info-item');
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-});
-
 // Phone Number Formatting (Turkish format)
 const phoneInputs = document.querySelectorAll('input[type="tel"]');
 phoneInputs.forEach(input => {
@@ -186,4 +174,180 @@ phoneInputs.forEach(input => {
         }
         e.target.value = value;
     });
+});
+
+// All DOMContentLoaded functionality in one place
+document.addEventListener('DOMContentLoaded', () => {
+    // Apply animation to cards and sections
+    const animatedElements = document.querySelectorAll('.service-card, .reference-card, .about-preview-content, .contact-info-item');
+    
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Hero Carousel Functionality
+    const carousel = document.querySelector('.carousel-slides');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    
+    if (carousel && slides.length > 0) {
+    
+    let currentSlide = 0;
+    let autoPlayInterval;
+    const slideInterval = 2000; // 2 seconds
+    
+    // Function to show a specific slide
+    function showSlide(index) {
+        // Remove active class from all slides and indicators
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Add active class to current slide and indicator
+        if (slides[index]) {
+            slides[index].classList.add('active');
+        }
+        if (indicators[index]) {
+            indicators[index].classList.add('active');
+        }
+        
+        currentSlide = index;
+    }
+    
+    // Function to go to next slide
+    function nextSlide() {
+        const next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+    }
+    
+    // Function to go to previous slide
+    function prevSlide() {
+        const prev = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prev);
+    }
+    
+    // Auto-play functionality
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, slideInterval);
+    }
+    
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+        }
+    }
+    
+    // Start auto-play
+    startAutoPlay();
+    
+    // Pause auto-play on hover
+    const carouselContainer = document.querySelector('.hero-carousel');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+        carouselContainer.addEventListener('mouseleave', startAutoPlay);
+    }
+    
+    // Navigation buttons
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            nextSlide();
+            setTimeout(startAutoPlay, slideInterval);
+        });
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            prevSlide();
+            setTimeout(startAutoPlay, slideInterval);
+        });
+    }
+    
+    // Indicator buttons
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            stopAutoPlay();
+            showSlide(index);
+            setTimeout(startAutoPlay, slideInterval);
+        });
+    });
+    
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe left - next slide
+                stopAutoPlay();
+                nextSlide();
+                setTimeout(startAutoPlay, slideInterval);
+            } else {
+                // Swipe right - previous slide
+                stopAutoPlay();
+                prevSlide();
+                setTimeout(startAutoPlay, slideInterval);
+            }
+        }
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (carouselContainer && document.querySelector('.carousel-slide.active')) {
+            if (e.key === 'ArrowLeft') {
+                stopAutoPlay();
+                prevSlide();
+                setTimeout(startAutoPlay, slideInterval);
+            } else if (e.key === 'ArrowRight') {
+                stopAutoPlay();
+                nextSlide();
+                setTimeout(startAutoPlay, slideInterval);
+            }
+        }
+    });
+    }
+
+    // Testimonials Infinite Scroll Animation
+    const testimonialsTrack = document.querySelector('.testimonials-track');
+    if (testimonialsTrack) {
+        // Clone testimonials for seamless loop
+        const testimonials = testimonialsTrack.querySelectorAll('.testimonial-card');
+        testimonials.forEach(card => {
+            const clone = card.cloneNode(true);
+            testimonialsTrack.appendChild(clone);
+        });
+        
+        // Add stagger animation delay to each card
+        const allCards = testimonialsTrack.querySelectorAll('.testimonial-card');
+        allCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.3}s`;
+        });
+        
+        // Reset animation when it completes for infinite loop
+        testimonialsTrack.addEventListener('animationiteration', () => {
+            // Smooth reset
+            testimonialsTrack.style.transition = 'none';
+            setTimeout(() => {
+                testimonialsTrack.style.transition = '';
+            }, 50);
+        });
+    }
 });

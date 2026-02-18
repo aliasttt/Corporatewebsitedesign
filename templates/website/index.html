@@ -5,18 +5,93 @@
 {% block meta_description %}Yüksek kalite asansör çözümleri - Konforlu ve güvenilir asansör sistemleri{% endblock %}
 
 {% block content %}
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1719361888647-0450402150ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBnbGFzcyUyMGVsZXZhdG9yJTIwbHV4dXJ5JTIwYnVpbGRpbmd8ZW58MXx8fHwxNzcxMzY1Mzk2fDA&ixlib=rb-4.1.0&q=80&w=1080')"></div>
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Yüksek Kalite Asansör Çözümleri</h1>
-                <p class="hero-subtitle">Konforlu ve Güvenilir Asansör Sistemleri</p>
-                <div class="hero-buttons">
-                    <a href="{% url 'website:hizmetler' %}" class="btn btn-primary btn-lg">Hizmetlerimizi İnceleyin</a>
-                    <a href="{% url 'website:teklif_alin' %}" class="btn btn-secondary btn-lg">Teklif Alın</a>
+    <!-- Hero Carousel Section -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slides">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                    <div class="slide-bg" style="background-image: url('{% static '1bdf87cf-4da4-480a-995d-27e9b26770b0.jpg' %}')"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="container">
+                        <div class="slide-content">
+                            <h1 class="slide-title">Modern ve Lüks Asansör Çözümleri</h1>
+                            <p class="slide-subtitle">Yüksek kalite standartlarında, güvenilir ve konforlu asansör sistemleri</p>
+                            <div class="slide-buttons">
+                                <a href="{% url 'website:hizmetler' %}" class="btn btn-primary btn-lg">Hizmetlerimizi İnceleyin</a>
+                                <a href="{% url 'website:teklif_alin' %}" class="btn btn-secondary btn-lg">Teklif Alın</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <div class="slide-bg" style="background-image: url('{% static '49c9f1bb-807f-4ab8-8c46-657c24928d21.jpg' %}')"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="container">
+                        <div class="slide-content">
+                            <h1 class="slide-title">Profesyonel Asansör Teknolojisi</h1>
+                            <p class="slide-subtitle">Son teknoloji ile donatılmış, enerji tasarruflu ve sessiz çalışan asansörler</p>
+                            <div class="slide-buttons">
+                                <a href="{% url 'website:hizmetler' %}" class="btn btn-primary btn-lg">Teknolojimizi Keşfedin</a>
+                                <a href="{% url 'website:iletisim' %}" class="btn btn-secondary btn-lg">İletişime Geçin</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <div class="slide-bg" style="background-image: url('{% static 'c4abd2ce-7f16-46f5-86da-97e1bfc5b7d8.jpg' %}')"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="container">
+                        <div class="slide-content">
+                            <h1 class="slide-title">Güvenli ve Dayanıklı Sistemler</h1>
+                            <p class="slide-subtitle">25 yıllık deneyimimizle, binlerce başarılı projeye imza attık</p>
+                            <div class="slide-buttons">
+                                <a href="{% url 'website:referanslar' %}" class="btn btn-primary btn-lg">Referanslarımız</a>
+                                <a href="{% url 'website:hakkimizda' %}" class="btn btn-secondary btn-lg">Hakkımızda</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                    <div class="slide-bg" style="background-image: url('{% static 'b3595dd4-2fbf-4f6a-97c6-2c3c355e6ca6.jpg' %}')"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="container">
+                        <div class="slide-content">
+                            <h1 class="slide-title">7/24 Bakım ve Servis Hizmeti</h1>
+                            <p class="slide-subtitle">Uzman ekibimiz ile asansörünüzün bakımını ve güvenliğini sağlıyoruz</p>
+                            <div class="slide-buttons">
+                                <a href="{% url 'website:hizmetler' %}#bakim" class="btn btn-primary btn-lg">Bakım Hizmetleri</a>
+                                <a href="{% url 'website:teklif_alin' %}" class="btn btn-secondary btn-lg">Hemen Teklif Alın</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel Navigation -->
+            <button class="carousel-nav carousel-prev" aria-label="Önceki">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <button class="carousel-nav carousel-next" aria-label="Sonraki">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+            
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="indicator" data-slide="1" aria-label="Slide 2"></button>
+                <button class="indicator" data-slide="2" aria-label="Slide 3"></button>
+                <button class="indicator" data-slide="3" aria-label="Slide 4"></button>
             </div>
         </div>
     </section>
@@ -138,6 +213,102 @@
             
             <div class="text-center" style="margin-top: 40px;">
                 <a href="{% url 'website:referanslar' %}" class="btn btn-primary">Tüm Referansları Görüntüle</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Müşteri Yorumları</h2>
+            <p class="section-subtitle">Müşterilerimizin bizim hakkımızda söyledikleri</p>
+            
+            <div class="testimonials-carousel">
+                <div class="testimonials-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Revolift Asansör ile çalışmak harika bir deneyimdi. Profesyonel ekip, kaliteli işçilik ve zamanında teslimat. Kesinlikle tavsiye ederim!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Mehmet Yılmaz</h4>
+                                <p class="author-date">15 Ocak 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Asansörümüzün kurulumundan bu yana hiçbir sorun yaşamadık. Bakım hizmetleri de çok profesyonel. Teşekkürler Revolift!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Ayşe Demir</h4>
+                                <p class="author-date">22 Şubat 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Modern tasarım ve yüksek kalite. Binamızın değerini artıran bir yatırım oldu. Herkese öneririm."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Ali Kaya</h4>
+                                <p class="author-date">8 Mart 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"7/24 destek hizmeti gerçekten çok değerli. Her zaman yanımızdalar ve hızlı çözüm sunuyorlar. Mükemmel bir firma!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Fatma Şahin</h4>
+                                <p class="author-date">3 Nisan 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Fiyat-performans açısından çok iyi bir seçim yaptık. Asansörümüz sessiz, hızlı ve güvenli. Çok memnunuz!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Mustafa Özkan</h4>
+                                <p class="author-date">18 Mayıs 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Teknik ekibin bilgisi ve müşteri hizmetleri harika. Projemiz zamanında ve sorunsuz tamamlandı. Teşekkürler!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Zeynep Arslan</h4>
+                                <p class="author-date">12 Haziran 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

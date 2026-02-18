@@ -16,8 +16,8 @@
     <link rel="apple-touch-icon" href="{% static 'logo.jpg' %}">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="{% static 'main.css' %}">
-    <link rel="stylesheet" href="{% static 'page-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}?v=2.0">
+    <link rel="stylesheet" href="{% static 'page-styles.css' %}?v=2.0">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -108,7 +108,7 @@
         <span>WhatsApp<br>Destek</span>
     </a>
 
-    <script src="{% static 'main.js' %}"></script>
+    <script src="{% static 'main.js' %}?v=2.0"></script>
     {% block extra_js %}{% endblock %}
 </body>
 </html>
