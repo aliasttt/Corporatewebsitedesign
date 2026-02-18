@@ -1,0 +1,168 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Hizmetler{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Hizmetlerimiz</h1>
+            <p>Tüm asansör ihtiyaçlarınız için profesyonel çözümler</p>
+        </div>
+    </section>
+
+    <!-- Service 1: Bina İçi Asansörler -->
+    <section class="section service-detail" id="bina-ici">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1719361888647-0450402150ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBnbGFzcyUyMGVsZXZhdG9yJTIwbHV4dXJ5JTIwYnVpbGRpbmd8ZW58MXx8fHwxNzcxMzY1Mzk2fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Bina İçi Asansörler">
+                </div>
+                <div class="service-detail-content">
+                    <span class="section-label">HİZMETLERİMİZ</span>
+                    <h2>Bina İçi Asansörler</h2>
+                    <p>Modern mimari ile uyumlu, konforlu ve güvenli bina içi asansör sistemleri. Konut, ofis ve ticari binalar için özel tasarımlar sunuyoruz.</p>
+                    
+                    <h3>Özellikler</h3>
+                    <ul class="feature-list">
+                        <li>✓ Sessiz ve yumuşak hareket teknolojisi</li>
+                        <li>✓ Enerji tasarruflu LED aydınlatma</li>
+                        <li>✓ Geniş kabin seçenekleri (4-21 kişi)</li>
+                        <li>✓ Modern ve şık iç tasarım alternatifleri</li>
+                        <li>✓ Acil durum alarm sistemi</li>
+                        <li>✓ Ayna, paslanmaz çelik veya cam duvar kaplama</li>
+                        <li>✓ Akıllı hedef kontrol sistemi</li>
+                        <li>✓ Dokunmatik LCD ekran paneller</li>
+                    </ul>
+                    
+                    <h3>Uygulama Alanları</h3>
+                    <ul class="application-list">
+                        <li>• Konut binaları ve rezidanslar</li>
+                        <li>• Ofis binaları ve iş merkezleri</li>
+                        <li>• Alışveriş merkezleri</li>
+                        <li>• Hastaneler ve sağlık tesisleri</li>
+                    </ul>
+                    
+                    <a href="{% url \'website:teklif_alin\' %}" class="btn btn-primary">Teklif Alın</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 2: Yük Asansörleri -->
+    <section class="section service-detail alt" id="yuk">
+        <div class="container">
+            <div class="service-detail-grid reverse">
+                <div class="service-detail-content">
+                    <span class="section-label">HİZMETLERİMİZ</span>
+                    <h2>Yük Asansörleri</h2>
+                    <p>Ağır yükleri güvenle taşıyan, dayanıklı ve yüksek kapasiteli asansör sistemleri. Endüstriyel tesisler, depolar ve özel uygulamalar için ideal çözümler.</p>
+                    
+                    <h3>Özellikler</h3>
+                    <ul class="feature-list">
+                        <li>✓ 500 kg - 5000 kg arası taşıma kapasitesi</li>
+                        <li>✓ Çelik konstrüksiyon güçlendirme</li>
+                        <li>✓ Geniş ve yüksek kabin tasarımı</li>
+                        <li>✓ Otomatik veya manuel kapı seçenekleri</li>
+                        <li>✓ Çift hızlı motor sistemi</li>
+                        <li>✓ Overload (aşırı yük) koruma sistemi</li>
+                        <li>✓ Endüstriyel dayanıklılık garantisi</li>
+                        <li>✓ Kolay yükleme rampası entegrasyonu</li>
+                    </ul>
+                    
+                    <h3>Uygulama Alanları</h3>
+                    <ul class="application-list">
+                        <li>• Fabrikalar ve üretim tesisleri</li>
+                        <li>• Depolar ve lojistik merkezleri</li>
+                        <li>• Oteller (servis ve mutfak bölümleri)</li>
+                        <li>• Hastaneler (hasta ve yatak taşıma)</li>
+                    </ul>
+                    
+                    <a href="{% url \'website:teklif_alin\' %}" class="btn btn-primary">Teklif Alın</a>
+                </div>
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1763325088554-529181f76960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwd2FyZWhvdXNlJTIwY2FyZ298ZW58MXx8fHwxNzcxMzY1NDY5fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Yük Asansörleri">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 3: Bakım & Servis -->
+    <section class="section service-detail" id="bakim">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1615354017884-1e03473898f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGV2YXRvciUyMHRlY2huaWNpYW4lMjBtYWludGVuYW5jZXxlbnwxfHx8fDE3NzEzNjUzOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Asansör Bakım & Servis">
+                </div>
+                <div class="service-detail-content">
+                    <span class="section-label">HİZMETLERİMİZ</span>
+                    <h2>Asansör Bakım & Servis</h2>
+                    <p>Asansörünüzün uzun ömürlü ve güvenli çalışması için periyodik bakım ve 7/24 acil müdahale hizmeti. Deneyimli teknisyen kadromuz her an yanınızda.</p>
+                    
+                    <h3>Hizmet Paketleri</h3>
+                    <ul class="feature-list">
+                        <li>✓ Aylık periyodik bakım kontrolleri</li>
+                        <li>✓ 7/24 acil arıza müdahale</li>
+                        <li>✓ Yedek parça değişim hizmeti</li>
+                        <li>✓ Elektrik ve mekanik sistem kontrolü</li>
+                        <li>✓ Güvenlik testleri ve sertifikasyon</li>
+                        <li>✓ Kabin içi temizlik ve bakım</li>
+                        <li>✓ Motor ve fren sistemi kontrolü</li>
+                        <li>✓ Otomatik izleme ve raporlama</li>
+                    </ul>
+                    
+                    <h3>Avantajlar</h3>
+                    <ul class="application-list">
+                        <li>• Arıza riskini minimum seviyeye indirir</li>
+                        <li>• Asansör ömrünü uzatır</li>
+                        <li>• Enerji verimliliğini artırır</li>
+                        <li>• Yasal zorunlulukları karşılar</li>
+                    </ul>
+                    
+                    <a href="{% url \'website:teklif_alin\' %}" class="btn btn-primary">Bakım Paketi Al</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Neden PrimeAsansör?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">⚡</div>
+                    <h4>Hızlı Kurulum</h4>
+                    <p>Deneyimli ekibimiz ile hızlı ve profesyonel kurulum garantisi</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🛡️</div>
+                    <h4>Garanti ve Güvence</h4>
+                    <p>Tüm ürünlerimizde 2 yıl garanti ve sürekli destek</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h4>Uygun Fiyat</h4>
+                    <p>Kaliteden ödün vermeden rekabetçi fiyat avantajları</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📞</div>
+                    <h4>7/24 Destek</h4>
+                    <p>Her an ulaşabileceğiniz teknik destek ve acil müdahale ekibi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Projeleriniz İçin Ücretsiz Teklif Alın</h2>
+                <p>Uzman ekibimiz en kısa sürede sizinle iletişime geçecektir</p>
+                <a href="{% url \'website:teklif_alin\' %}" class="btn btn-primary btn-lg">Hemen Teklif İste</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
