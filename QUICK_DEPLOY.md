@@ -60,7 +60,7 @@ DB_PASSWORD=YOUR_SECURE_PASSWORD
 DB_HOST=localhost
 DB_PORT=5432
 SECRET_KEY=YOUR_DJANGO_SECRET_KEY
-ALLOWED_HOSTS=your-domain.com,www.your-domain.com,your-server-ip
+ALLOWED_HOSTS=revoliftasansor.com,www.revoliftasansor.com
 ```
 
 تولید SECRET_KEY:
@@ -97,7 +97,7 @@ sudo systemctl status asansor
 
 ```bash
 sudo cp nginx_asansor.conf /etc/nginx/sites-available/asansor
-sudo nano /etc/nginx/sites-available/asansor  # تغییر دامنه
+sudo nano /etc/nginx/sites-available/asansor  # بررسی دامنه: revoliftasansor.com
 sudo ln -s /etc/nginx/sites-available/asansor /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
@@ -107,7 +107,7 @@ sudo systemctl restart nginx
 
 ```bash
 sudo apt install certbot python3-certbot-nginx -y
-sudo certbot --nginx -d your-domain.com -d www.your-domain.com
+sudo certbot --nginx -d revoliftasansor.com -d www.revoliftasansor.com
 ```
 
 بعد از SSL، در `settings_production.py`:

@@ -86,7 +86,7 @@ sudo systemctl status asansor
 # کپی فایل تنظیمات
 sudo cp nginx_asansor.conf /etc/nginx/sites-available/asansor
 
-# ویرایش دامنه
+# ویرایش دامنه (revoliftasansor.com)
 sudo nano /etc/nginx/sites-available/asansor
 
 # فعال‌سازی
@@ -101,7 +101,7 @@ sudo systemctl restart nginx
 
 ```bash
 sudo apt install certbot python3-certbot-nginx -y
-sudo certbot --nginx -d your-domain.com -d www.your-domain.com
+sudo certbot --nginx -d revoliftasansor.com -d www.revoliftasansor.com
 ```
 
 ## بررسی لاگ‌ها:
@@ -168,3 +168,21 @@ sudo systemctl restart asansor
 ## پشتیبانی:
 
 برای جزئیات بیشتر، فایل `DEPLOYMENT.md` را مطالعه کنید.
+
+
+
+
+sudo -u asansor bash -lc "
+cd /srv/asansor || exit 1
+
+git fetch origin main || exit 1
+git reset --hard origin/main || exit 1
+
+source venv/bin/activate || exit 1
+export DJANGO_SETTINGS_MODULE=config.settings_production
+
+pip install -r requirements.txt || exit 1
+python manage.py migrate || exit 1
+python manage.py collectstatic --noinput || exit 1
+"
+sudo systemctl restart asansor

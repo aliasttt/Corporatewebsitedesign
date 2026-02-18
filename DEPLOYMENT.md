@@ -225,7 +225,7 @@ sudo ufw status
 sudo apt install certbot python3-certbot-nginx -y
 
 # دریافت گواهینامه SSL
-sudo certbot --nginx -d your-domain.com -d www.your-domain.com
+sudo certbot --nginx -d revoliftasansor.com -d www.revoliftasansor.com
 
 # تست تمدید خودکار
 sudo certbot renew --dry-run
