@@ -1029,6 +1029,29 @@ ul {
     opacity: 0.8;
 }
 
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-credit {
+    font-size: 0.9rem;
+    margin-top: 0.75rem !important;
+}
+
+.footer-credit a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+}
+
+.footer-credit a:hover {
+    color: var(--accent-orange);
+    text-decoration: underline;
+}
+
 /* WhatsApp Button */
 .whatsapp-button {
     position: fixed;
