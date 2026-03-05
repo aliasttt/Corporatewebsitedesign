@@ -8,7 +8,7 @@ from decouple import config
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='revoliftasansor.com,www.revoliftasansor.com').split(',')
+ALLOWED_HOSTS = ["aliasadi.online", "www.aliasadi.online", "141.98.51.168"]
 
 # Secret Key from environment
 SECRET_KEY = config('SECRET_KEY', default=os.environ.get('SECRET_KEY'))
